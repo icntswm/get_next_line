@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: fkenned <marvin@42.fr>                     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/10 11:13:25 by fkenned           #+#    #+#             */
-/*   Updated: 2021/05/10 11:13:27 by fkenned          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #	include "get_next_line.h"
 
 static char	*save_buf(char *buffer)
@@ -105,3 +93,21 @@ int	get_next_line(int fd, char **line)
 	}
 	return (ft_check_neg_zero_readb(line, &box, read_b));
 }
+
+/*
+int main() {
+	char *line;
+	
+	line = NULL;
+	while(get_next_line(0, &line))
+	{
+		write(1, line, ft_strlen(line));
+		write(1, "\n", 1);
+		free(line);
+	}
+	write(1, line, ft_strlen(line));
+	write(1, "\n", 1);
+	free(line);
+	return (0);
+}
+*/
